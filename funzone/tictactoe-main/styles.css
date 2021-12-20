@@ -1,7 +1,6 @@
 body {
   text-align: center;
   background-color: #fff;
-  height: 100%
 
 }
 
@@ -10,17 +9,16 @@ html {
 }
 
 #start {
-  background-color: #4CAF50;
+  background-color: darkgreen;
   /* Green */
-  border: none;
+  border-radius: 50%;
   color: white;
-  padding: 10px;
-  padding-top: 12px;
+  padding: 18px;
+  padding-top: 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 2vw;
-  font-family: 'Press Start 2P', cursive;
   margin-bottom: 50px;
 }
 
@@ -37,7 +35,6 @@ html {
 }
 
 #title {
-  font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   margin: 5%;
   color: green;
