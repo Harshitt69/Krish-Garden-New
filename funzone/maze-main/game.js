@@ -134,7 +134,14 @@ const mazes = {
 };
 
 
-
+window.onscroll = function(ev) {
+  var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight,
+                   document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    if ((window.innerHeight + limit) >= document.body.offsetHeight) {
+        $(".btn").css("height", "6vw");
+        $(".btn").css("width", "6vw");
+    }
+};
 
 var started = false;
 var mazeListSize = Object.keys(mazes).length;
@@ -145,20 +152,21 @@ var mazeRows = undefined;
 var mazeMap = undefined;
 var level = -1;
 
+$("#fish_thank").css("display", "none");
+
 $("#start").click(function() {
   if (!started && level + 1 < mazeListSize) {
     level += 1;
     var randomMaze = Math.floor(Math.random() * mazeListSize);
     started = true;
     console.log("level_"+randomMaze);
-    $("#fish_thank").attr("src", "")
+    $("#fish_thank").css("display", "none");
     setBoard("level_"+level);
     $("#title").text("Help Me Reach The Pond!");
     $("#level").text("Level-" + Number(level+1));
     document.getElementById('controls').style.display = "block";
   }
 });
-
 
 function moveup() {
   if (!started) {
@@ -274,6 +282,7 @@ function gameEnds(playerPosition, goalPosition) {
   if (playerPosition["x"] == goalPosition["x"] && playerPosition["y"]==goalPosition["y"]) {
     document.getElementById('container').innerHTML = "";
     $("#title").text("Congratulation! You Have Solved the Maze")
+    $("#fish_thank").css("display", "block");
     $("#fish_thank").attr("src", "./images/fish_thank.gif")
     $("#level").text('');
     document.getElementById('controls').style.display = "none";

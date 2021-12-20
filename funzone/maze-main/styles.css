@@ -3,6 +3,18 @@ body {
   background-color: #fff;
 }
 
+.main {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.wrapper {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
 #controls {
   display: none;
   margin-left: 10px;
@@ -123,11 +135,9 @@ button#down::before {
 }
 
 .container {
-  float: left;
   display: block;
-  width: 100vw;
-  height: 10px;
-  max-height: 50%;
+  width: 10vw;
+  height: 10vh;
   margin: auto;
 }
 
@@ -183,7 +193,7 @@ button#down::before {
 }
 
 #fish_thank {
-    max-width: 100%;
+    max-width: 25vw;
     height: auto;
     width: auto\9; /* ie8 */
 }
