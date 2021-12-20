@@ -9,17 +9,15 @@ html {
 }
 
 #level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin: 5%;
-  color: green;
+  font-size: 4rem;
+  margin: 1%;
+  color: darkgreen;
 }
 
 .instruction {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
-  margin: 5%;
-  color: green;
+  font-size: 2rem;
+  margin: 1%;
+  color: darkgreen;
 }
 
 .container {
@@ -41,22 +39,21 @@ html {
 }
 
 #start {
-  background-color: #4CAF50;
+  background-color: darkgreen;
   /* Green */
-  border: none;
+  border-radius: 50%;
   color: white;
-  padding: 10px;
-  padding-top: 12px;
+  padding: 18px;
+  padding-top: 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 2vw;
-  font-family: 'Press Start 2P', cursive;
+  font-size: 3vw;
   margin-bottom: 50px;
 }
 
 .btn {
-  margin: 1vw;
+  margin: 2vw;
   display: inline-block;
   height: 15vw;
   width: 15vw;
